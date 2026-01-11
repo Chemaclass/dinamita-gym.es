@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Aviso Legal - {{ config.title }}{% endblock %}
+
+{% block content %}
+<main class="legal-page">
+    <section class="legal">
+        <div class="container">
+            <h1>Aviso Legal</h1>
+
+            <h2>Propiedad intelectual</h2>
+            <p>Todos los contenidos de este sitio web son propiedad de Dinamita Gym. Queda prohibida su reproduccion sin autorizacion.</p>
+
+            <h2>Proteccion de datos</h2>
+            <p>Este sitio web no recopila datos personales de los visitantes.</p>
+
+            <h2>Cookies</h2>
+            <p>Este sitio web no utiliza cookies.</p>
+
+            <a href="/" class="back-link">&larr; Volver</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; {{ config.extra.opening_year }} Dinamita Gym. Todos los derechos reservados.</p>
+        <p class="footer-credits">
+            Desarrollado por <a href="https://chemaclass.com" target="_blank" rel="noopener noreferrer">Chemaclass</a>
+            · <a href="/legal">Legal</a>
+        </p>
+    </footer>
+</main>
+{% endblock %}
