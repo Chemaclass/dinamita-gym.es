@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main class="landing">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="brand">Dinamita</span>
+                <span class="brand-sub">Gym</span>
+            </h1>
+            <p class="hero-tagline">{{ section.extra.tagline | default(value="Fitness funcional con alma") }}</p>
+            <div class="hero-badge">
+                <span class="badge-text">Apertura</span>
+                <span class="badge-year">2026</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">Un gimnasio diferente</h2>
+            <p class="section-lead">
+                {{ section.extra.about_lead | default(value="Olvida las filas de maquinas. En Dinamita Gym apostamos por el entrenamiento funcional con clases dirigidas por instructores cualificados.") }}
+            </p>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">&#128170;</div>
+                    <h3>Clases Dirigidas</h3>
+                    <p>Entrenamientos guiados por instructores profesionales que te motivaran y corregiran tu tecnica.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">&#9889;</div>
+                    <h3>Fitness Funcional</h3>
+                    <p>Ejercicios que mejoran tu rendimiento en la vida diaria, no solo tu aspecto fisico.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">&#10084;</div>
+                    <h3>Salud y Bienestar</h3>
+                    <p>Un enfoque integral que cuida tu cuerpo y tu mente para que te sientas mejor cada dia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coming Soon Section -->
+    <section class="coming-soon" id="contact">
+        <div class="container">
+            <h2 class="section-title light">Muy pronto en la Region de Murcia</h2>
+            <p class="section-lead light">
+                Estamos preparando todo para ofrecerte la mejor experiencia de fitness funcional.
+                Mantente atento a nuestras redes sociales para ser el primero en enterarte de la apertura.
+            </p>
+            <div class="social-cta">
+                <p>Siguenos para novedades o contactanos para mas informacion</p>
+                <a href="https://instagram.com/anidinamita725" target="_blank" rel="noopener noreferrer" class="instagram-link">
+                    <svg class="instagram-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                    <span>@anidinamita725</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-brand">Dinamita Gym</p>
+            <a href="https://instagram.com/anidinamita725" target="_blank" rel="noopener noreferrer" class="footer-instagram">
+                <svg class="instagram-icon-small" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+                @anidinamita725
+            </a>
+            <p class="footer-copy">&copy; {{ config.extra.opening_year }} - Todos los derechos reservados</p>
+        </div>
+    </footer>
+</main>
+{% endblock %}

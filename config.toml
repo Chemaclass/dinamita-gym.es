@@ -1,0 +1,12 @@
+# Dinamita Gym Website Configuration
+base_url = "https://dinamita-gym.es"
+title = "Dinamita Gym"
+description = "Tu nuevo espacio de fitness funcional en la Region de Murcia. Apertura 2026. Clases dirigidas con instructores para potenciar tu salud y bienestar."
+default_language = "es"
+compile_sass = true
+build_search_index = false
+generate_feeds = false
+
+[extra]
+author = "Dinamita Gym"
+opening_year = 2026
