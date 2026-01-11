@@ -5,7 +5,6 @@ $color-secondary: #1a1a2e;
 $color-dark: #0f0f1a;
 $color-light: #ffffff;
 $color-gray: #666;
-$color-gray-light: #f5f5f5;
 
 $font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
 
@@ -32,7 +31,7 @@ body {
 
 // Container
 .container {
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 0 2rem;
 }
@@ -44,35 +43,7 @@ body {
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, $color-secondary 0%, $color-dark 100%);
-    position: relative;
-    overflow: hidden;
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: radial-gradient(circle, rgba($color-primary, 0.1) 0%, transparent 50%);
-        animation: pulse 4s ease-in-out infinite;
-    }
-}
-
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-        opacity: 0.5;
-    }
-    50% {
-        transform: scale(1.1);
-        opacity: 0.8;
-    }
-}
-
-.hero-content {
     text-align: center;
-    z-index: 1;
     padding: 2rem;
 }
 
@@ -82,7 +53,7 @@ body {
 
 .brand {
     display: block;
-    font-size: clamp(3rem, 12vw, 8rem);
+    font-size: clamp(3rem, 12vw, 7rem);
     font-weight: 900;
     color: $color-light;
     text-transform: uppercase;
@@ -92,7 +63,7 @@ body {
 
 .brand-sub {
     display: block;
-    font-size: clamp(1.5rem, 6vw, 4rem);
+    font-size: clamp(1.5rem, 6vw, 3.5rem);
     font-weight: 700;
     color: $color-primary;
     text-transform: uppercase;
@@ -101,11 +72,10 @@ body {
 }
 
 .hero-tagline {
-    font-size: clamp(1rem, 3vw, 1.5rem);
-    color: rgba($color-light, 0.8);
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    color: rgba($color-light, 0.7);
     font-weight: 400;
-    margin-bottom: 3rem;
-    letter-spacing: 0.05em;
+    margin-bottom: 2.5rem;
 }
 
 .hero-badge {
@@ -113,39 +83,31 @@ body {
     flex-direction: column;
     align-items: center;
     background: $color-primary;
-    padding: 1rem 2.5rem;
+    padding: 1rem 2rem;
     border-radius: 50px;
-    transform: rotate(-3deg);
-    box-shadow: 0 10px 40px rgba($color-primary, 0.4);
 }
 
 .badge-text {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     font-weight: 600;
     color: $color-light;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.15em;
 }
 
 .badge-year {
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 900;
     color: $color-light;
     line-height: 1;
 }
 
-// About Section
-.about {
-    padding: 6rem 0;
-    background: $color-light;
-}
-
+// Section styles
 .section-title {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(1.5rem, 4vw, 2rem);
     font-weight: 900;
     text-align: center;
     margin-bottom: 1.5rem;
-    color: $color-secondary;
     text-transform: uppercase;
     letter-spacing: 0.05em;
 
@@ -155,11 +117,10 @@ body {
 }
 
 .section-lead {
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
     text-align: center;
-    max-width: 700px;
-    margin: 0 auto 4rem;
-    color: $color-gray;
+    max-width: 600px;
+    margin: 0 auto 3rem;
     line-height: 1.8;
 
     &.light {
@@ -167,128 +128,101 @@ body {
     }
 }
 
-.features {
+// Trainer Section
+.trainer {
+    padding: 5rem 0;
+    background: $color-secondary;
+    text-align: center;
+}
+
+.approach {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
-    margin-top: 3rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
 }
 
-.feature {
-    text-align: center;
-    padding: 2.5rem 2rem;
-    background: $color-gray-light;
-    border-radius: 1rem;
+.approach-item {
+    padding: 1.25rem 0.75rem;
+    border: 1px solid rgba($color-light, 0.2);
+    border-radius: 8px;
 }
 
-.feature-icon {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
+.approach-icon {
+    font-size: 1.75rem;
+    display: block;
+    margin-bottom: 0.75rem;
 }
 
-.feature h3 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: $color-secondary;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-.feature p {
-    font-size: 1rem;
-    color: $color-gray;
-    line-height: 1.7;
-}
-
-// Coming Soon Section
-.coming-soon {
-    padding: 6rem 0;
-    background: linear-gradient(135deg, $color-primary 0%, $color-primary-dark 100%);
-    text-align: center;
-}
-
-.social-cta {
-    margin-top: 2rem;
-
-    p {
-        font-size: 1rem;
-        color: rgba($color-light, 0.9);
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        margin-bottom: 1.5rem;
-    }
-}
-
-.instagram-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    background: $color-light;
-    color: $color-secondary;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.125rem;
-}
-
-.instagram-icon {
-    width: 1.5rem;
-    height: 1.5rem;
-}
-
-// Footer
-.footer {
-    padding: 3rem 0;
-    background: $color-dark;
-    text-align: center;
-}
-
-.footer-brand {
-    font-size: 1.5rem;
-    font-weight: 900;
+.approach-item h3 {
+    font-size: 0.75rem;
+    font-weight: 600;
     color: $color-light;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 1rem;
+    letter-spacing: 0.03em;
 }
 
-.footer-instagram {
-    display: inline-flex;
+.trainer-bio {
+    font-size: 0.95rem;
+    color: rgba($color-light, 0.6);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+// Connect Section
+.connect {
+    padding: 4rem 0;
+    background: $color-light;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: flex;
     align-items: center;
-    gap: 0.5rem;
-    color: rgba($color-light, 0.7);
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    background: $color-secondary;
+    color: $color-light;
     text-decoration: none;
-    font-size: 1rem;
     font-weight: 600;
-    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    border-radius: 8px;
 }
 
-.instagram-icon-small {
+.social-icon {
     width: 1.25rem;
     height: 1.25rem;
 }
 
-.footer-copy {
-    font-size: 0.875rem;
-    color: rgba($color-light, 0.5);
+// Footer
+.footer {
+    padding: 2rem 0;
+    background: $color-dark;
+    text-align: center;
+
+    p {
+        font-size: 0.8rem;
+        color: rgba($color-light, 0.4);
+    }
 }
 
-// Responsive - medium and smaller screens
-@media (max-width: 900px) {
-    .about,
-    .coming-soon {
-        padding: 4rem 0;
+// Responsive
+@media (max-width: 700px) {
+    .approach {
+        grid-template-columns: repeat(2, 1fr);
     }
+}
 
-    .features {
+@media (max-width: 400px) {
+    .approach {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .feature {
-        padding: 2rem 1.5rem;
     }
 }
