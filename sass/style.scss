@@ -1,6 +1,8 @@
-// Variables - Minimal palette
-$color-primary: #b8c9b8;       // Soft sage
-$color-primary-light: #d4e0d4; // Light sage
+// Variables - Sage & Lilac palette
+$color-sage: #b8c9b8;          // Soft sage
+$color-sage-light: #d4e0d4;    // Light sage
+$color-lilac: #d4c6e6;         // Soft lilac
+$color-lilac-light: #e8dff2;   // Light lilac
 $color-dark: #4a4a5c;
 $color-light: #ffffff;
 $color-text: #3d3d4a;
@@ -41,7 +43,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+    background: linear-gradient(135deg, $color-sage 0%, $color-lilac 100%);
     text-align: center;
     padding: 2rem;
 }
@@ -137,7 +139,7 @@ body {
 // Trainer Section
 .trainer {
     padding: 5rem 0;
-    background: $color-primary-light;
+    background: $color-sage-light;
     text-align: center;
 }
 
@@ -179,7 +181,7 @@ body {
 // Services Section
 .services {
     padding: 4rem 0;
-    background: $color-primary;
+    background: $color-lilac;
     text-align: center;
 }
 
@@ -202,7 +204,7 @@ body {
 // Connect Section
 .connect {
     padding: 4rem 0;
-    background: $color-primary-light;
+    background: $color-lilac-light;
     text-align: center;
 }
 
@@ -235,7 +237,7 @@ body {
 // Footer
 .footer {
     padding: 2rem 0;
-    background: $color-primary;
+    background: $color-lilac;
     text-align: center;
 
     p {
