@@ -17,6 +17,7 @@
     <meta property="og:url" content="{{ config.base_url }}">
     <meta property="og:title" content="{{ config.title }} - Fitness Funcional en Murcia">
     <meta property="og:description" content="{{ config.description }}">
+    <meta property="og:image" content="{{ config.base_url }}/og-image.svg">
     <meta property="og:locale" content="{{ config.extra.locale }}">
     <meta property="og:site_name" content="{{ config.title }}">
 
@@ -24,12 +25,16 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ config.title }} - Fitness Funcional en Murcia">
     <meta name="twitter:description" content="{{ config.description }}">
+    <meta name="twitter:image" content="{{ config.base_url }}/og-image.svg">
 
     <!-- Theme Color -->
-    <meta name="theme-color" content="#d4c6e6">
-    <meta name="msapplication-TileColor" content="#d4c6e6">
+    <meta name="theme-color" content="#b8c9b8">
+    <meta name="msapplication-TileColor" content="#b8c9b8">
 
     <title>{% block title %}{{ config.title }} - Fitness Funcional en Murcia{% endblock %}</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="{{ get_url(path='favicon.svg') }}">
 
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

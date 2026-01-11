@@ -30,6 +30,13 @@ body {
     background: $color-light;
 }
 
+// Focus & Accessibility
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid $color-dark;
+    outline-offset: 2px;
+}
+
 // Container
 .container {
     max-width: 900px;
@@ -199,6 +206,11 @@ body {
     font-size: 0.85rem;
     font-weight: 600;
     border-radius: 50px;
+    transition: background 0.2s ease;
+
+    &:hover {
+        background: rgba($color-light, 0.9);
+    }
 }
 
 // Connect Section
@@ -227,6 +239,12 @@ body {
     font-size: 0.95rem;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
 }
 
 .social-icon {
@@ -269,9 +287,10 @@ body {
         color: $color-dark;
         font-weight: 600;
         text-decoration: none;
+        transition: opacity 0.2s ease;
 
         &:hover {
-            text-decoration: underline;
+            opacity: 0.7;
         }
     }
 }
@@ -295,9 +314,10 @@ body {
             color: $color-dark;
             text-decoration: none;
             font-weight: 600;
+            transition: opacity 0.2s ease;
 
             &:hover {
-                text-decoration: underline;
+                opacity: 0.7;
             }
         }
     }
