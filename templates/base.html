@@ -3,23 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ config.description }}">
-    <meta name="author" content="{{ config.extra.author }}">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="{{ config.title }}">
-    <meta property="og:description" content="{{ config.description }}">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="{{ config.description }}">
+    <meta name="keywords" content="{{ config.extra.keywords }}">
+    <meta name="author" content="{{ config.extra.author }}">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="{{ config.base_url }}">
+
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ config.base_url }}">
+    <meta property="og:title" content="{{ config.title }} - Fitness Funcional en Murcia">
+    <meta property="og:description" content="{{ config.description }}">
+    <meta property="og:locale" content="{{ config.extra.locale }}">
+    <meta property="og:site_name" content="{{ config.title }}">
 
-    <title>{% block title %}{{ config.title }}{% endblock %}</title>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ config.title }} - Fitness Funcional en Murcia">
+    <meta name="twitter:description" content="{{ config.description }}">
 
-    <link rel="stylesheet" href="{{ get_url(path='style.css') }}">
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#ff4d4d">
+    <meta name="msapplication-TileColor" content="#ff4d4d">
 
-    <!-- Google Fonts -->
+    <title>{% block title %}{{ config.title }} - Fitness Funcional en Murcia{% endblock %}</title>
+
+    <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ get_url(path='style.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SportsActivityLocation",
+        "name": "{{ config.title }}",
+        "description": "{{ config.description }}",
+        "url": "{{ config.base_url }}",
+        "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Region de Murcia",
+            "addressCountry": "ES"
+        },
+        "sameAs": [
+            "https://instagram.com/{{ config.extra.instagram }}"
+        ],
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "description": "Apertura prevista en 2026"
+        }
+    }
+    </script>
 </head>
 <body>
     {% block content %}{% endblock %}

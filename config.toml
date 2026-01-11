@@ -10,3 +10,6 @@ generate_feeds = false
 [extra]
 author = "Dinamita Gym"
 opening_year = 2026
+keywords = "gimnasio, fitness funcional, clases dirigidas, entrenamiento, salud, bienestar, Murcia, Region de Murcia"
+locale = "es_ES"
+instagram = "anidinamita725"
